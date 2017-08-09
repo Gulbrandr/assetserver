@@ -1,0 +1,101 @@
+<div class="page-header">
+  <h3>Assets by Type</h3>
+</div>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="/#home" data-toggle="tab">Computer</a></li>
+  <li><a href="/#profile" data-toggle="tab">Monitor</a></li>
+  <li><a href="/#kit" data-toggle="tab">Kits</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+  		<label for="query">Query:</label>
+	<input type="text" name="query" value="" ng-model="query" class="form-control" placeholder="">
+	<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Serial</th>
+            <th>Custodian</th>
+            <th>Scanned</th>
+            <th>LastScanned</th>
+            <th colspan="1" rowspan="" headers="" scope=""></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="asset in assetscomputers | filter:query">
+            <td>{{asset.Make}}</td>
+            <td>{{asset.Model}}</td>
+            <td>{{asset.Type}}</td>
+            <td>{{asset.Serial}}</td>
+            <td>{{asset.Custodian}}</td>
+            <td>{{asset.Scanned}}</td>
+            <td>{{asset.LastScanned}}</td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  </div>
+  <div class="tab-pane" id="profile">
+
+  		<label for="query">Query:</label>
+	<input type="text" name="query" value="" ng-model="query" class="form-control" placeholder="">
+	<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Serial</th>
+            <th>Custodian</th>
+            <th>Scanned</th>
+            <th>LastScanned</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="asset in assetsmonitors | filter:query">
+            <td>{{asset.Make}}</td>
+            <td>{{asset.Model}}</td>
+            <td>{{asset.Type}}</td>
+            <td>{{asset.Serial}}</td>
+            <td>{{asset.Custodian}}</td>
+            <td>{{asset.Scanned}}</td>
+            <td>{{asset.LastScanned}}</td>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+<div class="tab-pane" id="kit">
+
+        <label for="query">Query:</label>
+    <input type="text" name="query" value="" ng-model="query" class="form-control" placeholder="">
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Serial</th>
+            <th>Custodian</th>
+            <th>Scanned</th>
+            <th>LastScanned</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="asset in assetskits | filter:query">
+            <td>{{asset.Make}}</td>
+            <td>{{asset.Model}}</td>
+            <td>{{asset.Type}}</td>
+            <td>{{asset.Serial}}</td>
+            <td>{{asset.Custodian}}</td>
+            <td>{{asset.Scanned}}</td>
+            <td>{{asset.LastScanned}}</td>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+</div>

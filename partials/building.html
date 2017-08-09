@@ -1,0 +1,72 @@
+<div class="page-header">
+  <h3>Assets by Building</h3>
+</div>
+<!-- Nav tabs -->
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="/#home" data-toggle="tab">Building A</a></li>
+  <li><a href="/#profile" data-toggle="tab">Building B</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+  		<label for="query">Query:</label>
+	<input type="text" name="query" value="" ng-model="query" class="form-control" placeholder="">
+	<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Serial</th>
+            <th>Custodian</th>
+            <th>Scanned</th>
+            <th>LastScanned</th>
+            <th colspan="1" rowspan="" headers="" scope=""></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="asset in assetsa | filter:query">
+            <td>{{asset.Make}}</td>
+            <td>{{asset.Model}}</td>
+            <td>{{asset.Type}}</td>
+            <td>{{asset.Serial}}</td>
+            <td>{{asset.Custodian}}</td>
+            <td>{{asset.Scanned}}</td>
+            <td>{{asset.LastScanned}}</td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  </div>
+  <div class="tab-pane" id="profile">
+
+  		<label for="query">Query:</label>
+	<input type="text" name="query" value="" ng-model="query" class="form-control" placeholder="">
+	<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Serial</th>
+            <th>Custodian</th>
+            <th>Scanned</th>
+            <th>LastScanned</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="asset in assetsb | filter:query">
+            <td>{{asset.Make}}</td>
+            <td>{{asset.Model}}</td>
+            <td>{{asset.Type}}</td>
+            <td>{{asset.Serial}}</td>
+            <td>{{asset.Custodian}}</td>
+            <td>{{asset.Scanned}}</td>
+            <td>{{asset.LastScanned}}</td>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+</div>

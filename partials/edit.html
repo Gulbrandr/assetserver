@@ -1,0 +1,22 @@
+<div class="row">
+				{{entry}}
+				<div class="col-md-4">
+				<form role="form">
+				<label>First Name<input type="text" ng-model="entry.firstName" class="form-control" name="" value="" placeholder=""></label><br>
+				<label>Last Name<input type="text" ng-model="entry.lastName" class="form-control" name="" value=""></label><br>
+				<label>Address<input type="text" ng-model="entry.address" class="form-control"name="" value=""></label><br>
+				<label>City<input type="text" ng-model="entry.city" class="form-control" name="" value=""></label><br>
+				<label>State<input type="text" ng-model="entry.state" class="form-control" name="" value=""></label><br>
+				<label>Zip<input type="text" ng-model="entry.zip" class="form-control" name="" value=""></label><br>
+				<label>Telephone<input type="telephone" ng-model="entry.telephone" class="form-control" name="" value=""></label><br>		
+				</form>
+				<button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+				<a class="btn btn-success" href="../../case7">Done</a>
+				</div>				
+				<div class="col-md-4">
+					<button type="button" class="btn btn-warning" ng-click="reset()">reset</button>
+				</div>
+				<div class="col-md-4">
+					
+				</div>
+			</div>

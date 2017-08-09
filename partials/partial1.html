@@ -1,0 +1,36 @@
+Show: Qr Scanner
+<input type="checkbox" name="" ng-model="showqr">
+<br>
+<form id="Asset">
+
+    <div class="row">
+        <div class="col-xs-3 col-md-3">
+            <label>Make</label><br>
+            <label>Model</label><br>
+            <label>Type</label><br>
+            <label>Serial</label><br>
+            <label>Custodian</label><br>
+            <label>Location</label><br>
+
+        </div>
+        <div class="col-xs-9 col-md-9">
+          <textarea name="csv" ng-model="csv" ng-change="csvtoentry()" cols="25" rows="100" ng-show="showqr"></textarea>
+            <input ng-hide="showqr" type="text" name="assetid" id="assetid" ng-model="entry.Make" placeholder="" /><br>
+            <input type="text" name="make" ng-model="entry.Model" placeholder="" ng-hide="showqr" ><br>
+            <input type="text" name="model" ng-model="entry.Type" placeholder="" ng-hide="showqr" ><br>
+            <input type="text" name="type" ng-model="entry.Serial" placeholder="" ng-hide="showqr" ><br>
+            <input type="text" name="serial" ng-model="entry.Location" placeholder="" ng-hide="showqr" ><br>
+            <input type="text" name="custodian" ng-model="entry.Custodian" ng-hide="showqr" placeholder="" ><br>
+            
+        <br>
+        </div>
+
+    </div>
+
+    
+
+
+</form>
+<button type="submit" href="#" ng-click="insert()" class="btn btn-primary col-xs-12 col-md-6" id="makemodel">submit</button>
+
+{{entry}}

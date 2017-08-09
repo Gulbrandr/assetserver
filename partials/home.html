@@ -1,0 +1,63 @@
+<div class="page-header">
+  <h3>All Assets</h3>
+</div>
+<div class="container">
+
+<div ng-show="alldisplay" class="col-md-8 col-xs-12">
+	<label for="query">Query:</label>
+<input type="text" name="query" value="" ng-model="query" class="form-control" placeholder="">
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Serial</th>
+            <th>Custodian</th>
+            <th>Location</th>
+            <th>Scanned</th>
+            <th>LastScanned</th>
+            <th colspan="1" rowspan="" headers="" scope=""></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="asset in assets | filter:query">
+            <td>{{asset.Make}}</td>
+            <td>{{asset.Model}}</td>
+            <td>{{asset.Type}}</td>
+            <td>{{asset.Serial}}</td>
+            <td>{{asset.Custodian}}</td>
+            <td>{{asset.Location}}</td>
+            <td>{{asset.Scanned}}</td>
+            <td>{{asset.LastScanned}}</td>
+            <td><button class="btn" ng-click="editentry(asset.Id)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div ng-show="entrydisplay" class="col-md-4">
+	<form role="form">
+				<label>Make<input type="text" ng-model="entry.Make" class="form-control" name="" value="" placeholder=""></label><br>
+				<label>Model<input type="text" ng-model="entry.Model" class="form-control" name="" value=""></label><br>
+				<label>Type<input type="text" ng-model="entry.Type" class="form-control"name="" value=""></label><br>
+				<label>Custodian<input type="text" ng-model="entry.Custodian" class="form-control" name="" value=""></label><br>
+				<label>Location<input type="text" ng-model="entry.Location" class="form-control" name="" value=""></label><br>
+				<label>Scanned:&nbsp;&nbsp;&nbsp; </label>{{entry.Scanned}}<br>
+				<label>LastScanned:&nbsp;&nbsp;&nbsp; </label>{{entry.LastScanned}}<br>		
+				</form>
+				
+				<button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+				<button class="btn btn-success" ng-click="done();">Done</button><br>
+                <br>
+				<div style="width:59%;" ng-show="saveNotification" class="alert alert-success">{{saveNotification}}</div>
+				
+								
+				<div class="col-md-4">
+					
+				</div>
+</div>
+</div>
+
+				
