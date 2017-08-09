@@ -1,10 +1,10 @@
-h1. Asset Server
+# Asset Server
 
-###Reports
+## Reports
 
-####Stock
+### Stock
 Based on username if custodian is called inventory it is counted as part of stock
-####Building
+### Building
 Report list assets for each building
-####Type
+### Type
 Report list assets of each kit type
